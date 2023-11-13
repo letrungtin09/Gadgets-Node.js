@@ -1,0 +1,32 @@
+.formInsertEdit {
+  padding: $pd-0 $pd-9;
+  margin-bottom: 30px;
+  min-height: 700px;
+  .formInsertEdit__input {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 15px;
+    background-color: $color-white-1;
+    border: 2px solid $color-gray-0;
+    border-radius: 5px;
+  }
+  .formInsertEdit__label {
+    font-weight: $fw-2;
+    margin-bottom: 5px;
+  }
+  .btn-form {
+    display: inline-block;
+    border: 1px solid $color-gray-3;
+    padding: 5px 10px;
+    margin-right: 5px;
+    text-decoration: none;
+    color: $color-white-0;
+    font-weight: $fw-2;
+    height: 35px;
+    border-radius: 5px;
+    background-color: $color-black-0;
+  }
+  .formInsertEdit__btn {
+    margin-top: 10px;
+  }
+}

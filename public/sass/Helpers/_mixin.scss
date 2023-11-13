@@ -1,0 +1,15 @@
+@mixin styleButton($pd-y, $pd-x, $bg-clr, $clr, $fs, $fw) {
+  padding: $pd-y $pd-x;
+  background-color: $bg-clr;
+  color: $clr;
+  font-size: $fs;
+  font-weight: $fw;
+  border-radius: 5px;
+  border: none;
+  transition: 0.2s;
+}
+
+@mixin hoverButton($clr, $bg-clr) {
+  color: $clr;
+  background-color: $bg-clr;
+}

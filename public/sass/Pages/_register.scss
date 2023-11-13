@@ -1,0 +1,22 @@
+.register {
+  .register__form {
+    a {
+      text-decoration: none;
+      font-weight: $fw-2;
+      color: $color-blue-1;
+    }
+    .register__btn {
+      margin-top: $mg-2;
+    }
+    .register__rule {
+      text-align: center;
+      margin-top: $mg-2;
+      padding: 0 $pd-4 $pd-5;
+      border-bottom: 1px solid $color-gray-1;
+    }
+    .register__login {
+      margin-top: $mg-2;
+      text-align: center;
+    }
+  }
+}

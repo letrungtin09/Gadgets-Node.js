@@ -1,0 +1,16 @@
+.showAllPd {
+  padding-top: $pd-6;
+  padding-bottom: $pd-9;
+  background-color: $color-white-4;
+  .showAllPd__content {
+    position: relative;
+    .showAllPd__list {
+      padding: $pd-0;
+      background-color: $color-white-2;
+      border-radius: $border-radius-1;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      row-gap: 10px;
+    }
+  }
+}

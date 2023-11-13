@@ -1,0 +1,103 @@
+footer {
+  background-color: $color-black-0;
+  .footer__content {
+    padding: $pd-10 0;
+    .footer__row {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      h5 {
+        color: $color-white-0;
+        font-size: $fs-1;
+        text-transform: uppercase;
+        margin-bottom: $mg-3;
+      }
+      .footer__social {
+        .footer__logo {
+          margin-bottom: $mg-3;
+          img {
+            width: 150px;
+          }
+        }
+        .footer__contact {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          margin-bottom: $mg-3;
+          li {
+            margin-bottom: $mg-4;
+            color: $color-white-3;
+            span {
+              color: $color-white-0;
+              font-weight: $fw-4;
+            }
+          }
+        }
+        .footer__icon {
+          a {
+            text-decoration: none;
+            color: $color-black-0;
+          }
+          i {
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            font-size: $fs-5;
+            background-color: $color-white-0;
+            border-radius: 50%;
+            margin-right: $mg-5;
+          }
+        }
+      }
+      .footer__info,
+      .footer__support {
+        ul {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          li {
+            margin-bottom: $mg-4;
+            a {
+              text-decoration: none;
+              color: $color-white-3;
+              transition: 0.2s;
+              &:hover {
+                color: $color-white-0;
+              }
+            }
+          }
+        }
+      }
+      .footer__payment {
+        .footer__img {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          row-gap: 10px;
+          column-gap: 5px;
+          .img-item {
+            img {
+              width: 50px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .footer__copyright {
+    background-color: $color-black-0;
+    padding: $pd-4 0;
+    .footer__lttin {
+      margin-bottom: 0;
+      color: $color-white-0;
+      font-size: $fs-0;
+      text-align: center;
+      color: $color-gray-0;
+      a {
+        text-decoration: none;
+        color: $color-blue-0;
+        font-weight: $fw-2;
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+.featured {
+  background-color: $color-white-4;
+  padding-bottom: $pd-9;
+  .featured__content {
+    position: relative;
+    .featured__list {
+      padding: $pd-0;
+      background-color: $color-white-2;
+      border-radius: $border-radius-1;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      row-gap: 10px;
+    }
+  }
+}

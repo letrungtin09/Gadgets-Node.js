@@ -1,0 +1,629 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "nameCate": "Màn hình PC"
+    },
+    {
+      "id": 2,
+      "nameCate": "Máy tính xách tay"
+    },
+    {
+      "id": 3,
+      "nameCate": "Điện thoại"
+    },
+    {
+      "id": 4,
+      "nameCate": "Đồng hồ thông minh"
+    },
+    {
+      "id": 5,
+      "nameCate": "Tai nghe"
+    },
+    {
+      "id": 6,
+      "nameCate": "Máy nghe nhạc"
+    },
+    {
+      "id": 7,
+      "nameCate": "Camera"
+    },
+    {
+      "id": 8,
+      "nameCate": "Máy đọc sách"
+    },
+    {
+      "id": 9,
+      "nameCate": "Phụ kiện"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "nameProduct": "LG UltraGear 27GR95QE-B.ATV - 26.5in OLED QHD 240Hz",
+      "image": "pc-1/pd-1.jpg",
+      "price": 24490000,
+      "sale": 0.1,
+      "imagesNav": [
+        "pc-1/de-1.jpg",
+        "pc-1/de-2.jpg",
+        "pc-1/de-3.jpg",
+        "pc-1/de-4.jpg",
+        "pc-1/de-5.jpg",
+        "pc-1/de-6.jpg",
+        "pc-1/de-7.jpg"
+      ],
+      "imagesZoom": [
+        "pc-1/pc-1.jpg",
+        "pc-1/pc-2.jpg",
+        "pc-1/pc-3.jpg",
+        "pc-1/pc-4.jpg",
+        "pc-1/pc-5.jpg",
+        "pc-1/pc-6.jpg",
+        "pc-1/pc-7.jpg"
+      ],
+      "featured": 1,
+      "purchase": 10,
+      "idCate": 1,
+      "brand": "LG"
+    },
+    {
+      "id": 2,
+      "nameProduct": "Dahua DHI-LM27-C201 - 27in FHD IPS",
+      "image": "pc-2/pd-2.jpg",
+      "price": 2700000,
+      "sale": 0,
+      "imagesNav": [
+        "pc-2/de-1.jpg",
+        "pc-2/de-2.jpg",
+        "pc-2/de-3.jpg",
+        "pc-2/de-4.jpg",
+        "pc-2/de-5.jpg",
+        "pc-2/de-6.jpg"
+      ],
+      "imagesZoom": [
+        "pc-2/pc-1.jpg",
+        "pc-2/pc-2.jpg",
+        "pc-2/pc-3.jpg",
+        "pc-2/pc-4.jpg",
+        "pc-2/pc-5.jpg",
+        "pc-2/pc-6.jpg"
+      ],
+      "featured": 0,
+      "purchase": 5,
+      "idCate": 1,
+      "brand": "Dahua"
+    },
+    {
+      "id": 3,
+      "nameProduct": "ASUS Vivobook 15 X1504ZA-NJ582W - Intel UHD",
+      "image": "lap-1/laptop-1.jpg",
+      "price": 16990000,
+      "sale": 0.15,
+      "imagesNav": [
+        "lap-1/de-1.jpg",
+        "lap-1/de-2.jpg",
+        "lap-1/de-3.jpg",
+        "lap-1/de-4.jpg",
+        "lap-1/de-5.jpg",
+        "lap-1/de-6.jpg"
+      ],
+      "imagesZoom": [
+        "lap-1/zoom-1.jpg",
+        "lap-1/zoom-2.jpg",
+        "lap-1/zoom-3.jpg",
+        "lap-1/zoom-4.jpg",
+        "lap-1/zoom-5.jpg",
+        "lap-1/zoom-6.jpg"
+      ],
+      "featured": 0,
+      "purchase": 2,
+      "idCate": 2,
+      "brand": "ASUS"
+    },
+    {
+      "id": 4,
+      "nameProduct": "Garmin Venu 3 - Stone White",
+      "image": "watch-1/watch-1.jpg",
+      "price": 12290000,
+      "sale": 0,
+      "imagesNav": [
+        "watch-1/de-1.jpg",
+        "watch-1/de-2.jpg",
+        "watch-1/de-3.jpg",
+        "watch-1/de-4.jpg",
+        "watch-1/de-5.jpg"
+      ],
+      "imagesZoom": [
+        "watch-1/zoom-1.jpg",
+        "watch-1/zoom-2.jpg",
+        "watch-1/zoom-3.jpg",
+        "watch-1/zoom-4.jpg",
+        "watch-1/zoom-5.jpg"
+      ],
+      "featured": 1,
+      "purchase": 12,
+      "idCate": 4,
+      "brand": "Garmin"
+    },
+    {
+      "id": 5,
+      "nameProduct": "Máy đọc sách Kindle Paperwhite 4 chống nước 8GB",
+      "image": "read-1/read-1.jpg",
+      "price": 5690000,
+      "sale": 0,
+      "imagesNav": [
+        "read-1/de-1.jpg",
+        "read-1/de-2.jpg",
+        "read-1/de-3.jpg",
+        "read-1/de-4.jpg",
+        "read-1/de-5.jpg"
+      ],
+      "imagesZoom": [
+        "read-1/zoom-1.jpg",
+        "read-1/zoom-2.jpg",
+        "read-1/zoom-3.jpg",
+        "read-1/zoom-4.jpg",
+        "read-1/zoom-5.jpg"
+      ],
+      "featured": 1,
+      "purchase": 20,
+      "idCate": 8,
+      "brand": "Amazon"
+    },
+    {
+      "id": 6,
+      "nameProduct": "Razer Ornata V3 X",
+      "image": "key-1/key-1.jpg",
+      "price": 1090000,
+      "sale": 0.1,
+      "imagesNav": [
+        "key-1/de-1.jpg",
+        "key-1/de-2.jpg"
+      ],
+      "imagesZoom": [
+        "key-1/zoom-1.png",
+        "key-1/zoom-2.png"
+      ],
+      "featured": 1,
+      "purchase": 27,
+      "idCate": 9,
+      "brand": "Razer"
+    },
+    {
+      "id": 7,
+      "nameProduct": "Dahua DHI-LM24-A200 - 23.6in FHD VA",
+      "image": "pc-3/pd-3.jpg",
+      "price": 2000000,
+      "sale": 0,
+      "imagesNav": [
+        "pc-3/de-1.jpg",
+        "pc-3/de-2.jpg"
+      ],
+      "imagesZoom": [
+        "pc-3/pc-1.jpg",
+        "pc-3/pc-2.jpg"
+      ],
+      "featured": 0,
+      "purchase": 7,
+      "idCate": 1,
+      "brand": "Dahua"
+    },
+    {
+      "id": 8,
+      "nameProduct": "Dahua DHI-LM27-E231 - 27in FHD IPS",
+      "image": "pc-4/pd-4.jpg",
+      "price": 4190000,
+      "sale": 0,
+      "imagesNav": [
+        "pc-4/de-1.jpg",
+        "pc-4/de-2.jpg",
+        "pc-4/de-3.jpg",
+        "pc-4/de-4.jpg"
+      ],
+      "imagesZoom": [
+        "pc-4/pc-1.jpg",
+        "pc-4/pc-2.jpg",
+        "pc-4/pc-3.jpg",
+        "pc-4/pc-4.jpg"
+      ],
+      "featured": 0,
+      "purchase": 5,
+      "idCate": 1,
+      "brand": "Dahua"
+    },
+    {
+      "id": 9,
+      "nameProduct": "Dell Vostro 3430 - i7-1355U - 16GB - 512GB SSD",
+      "image": "lap-2/laptop-2.jpg",
+      "price": 25990000,
+      "sale": 0,
+      "imagesNav": [
+        "lap-2/de-1.jpg",
+        "lap-2/de-2.jpg",
+        "lap-2/de-3.jpg",
+        "lap-2/de-4.jpg",
+        "lap-2/de-5.jpg",
+        "lap-2/de-6.jpg",
+        "lap-2/de-7.jpg"
+      ],
+      "imagesZoom": [
+        "lap-2/zoom-1.jpg",
+        "lap-2/zoom-2.jpg",
+        "lap-2/zoom-3.jpg",
+        "lap-2/zoom-4.jpg",
+        "lap-2/zoom-5.jpg",
+        "lap-2/zoom-6.jpg",
+        "lap-2/zoom-7.jpg"
+      ],
+      "featured": 0,
+      "purchase": 14,
+      "idCate": 2,
+      "brand": "Dell"
+    },
+    {
+      "id": 10,
+      "nameProduct": "Lenovo ThinkPad T16 Gen 2 - i7-1355U - 16GB DDR5",
+      "image": "lap-3/laptop-3.jpg",
+      "price": 31090000,
+      "sale": 0.2,
+      "imagesNav": [
+        "lap-3/de-1.jpg",
+        "lap-3/de-2.jpg",
+        "lap-3/de-3.jpg",
+        "lap-3/de-4.jpg",
+        "lap-3/de-5.jpg",
+        "lap-3/de-6.jpg"
+      ],
+      "imagesZoom": [
+        "lap-3/zoom-1.jpg",
+        "lap-3/zoom-2.jpg",
+        "lap-3/zoom-3.jpg",
+        "lap-3/zoom-4.jpg",
+        "lap-3/zoom-5.jpg",
+        "lap-3/zoom-6.jpg"
+      ],
+      "featured": 1,
+      "purchase": 10,
+      "idCate": 2,
+      "brand": "Lenovo"
+    },
+    {
+      "id": 11,
+      "nameProduct": "Garmin Instinct Black - Tactical Edition Camo",
+      "image": "watch-2/watch-2.jpg",
+      "price": 9900000,
+      "sale": 0.05,
+      "imagesNav": [
+        "watch-2/de-1.jpg",
+        "watch-2/de-2.jpg",
+        "watch-2/de-3.jpg",
+        "watch-2/de-4.jpg"
+      ],
+      "imagesZoom": [
+        "watch-2/zoom-1.png",
+        "watch-2/zoom-2.png",
+        "watch-2/zoom-3.png",
+        "watch-2/zoom-4.png"
+      ],
+      "featured": 1,
+      "purchase": 9,
+      "idCate": 4,
+      "brand": "Garmin"
+    },
+    {
+      "id": 12,
+      "nameProduct": "Razer Basilisk V3 X HyperSpeed",
+      "image": "mouse-1/mouse-1.jpg",
+      "price": 1890000,
+      "sale": 0,
+      "imagesNav": [
+        "mouse-1/de-1.jpg",
+        "mouse-1/de-2.jpg",
+        "mouse-1/de-3.jpg",
+        "mouse-1/de-4.jpg",
+        "mouse-1/de-5.jpg",
+        "mouse-1/de-6.jpg"
+      ],
+      "imagesZoom": [
+        "mouse-1/zoom-1.jpg",
+        "mouse-1/zoom-2.jpg",
+        "mouse-1/zoom-3.jpg",
+        "mouse-1/zoom-4.jpg",
+        "mouse-1/zoom-5.jpg",
+        "mouse-1/zoom-6.jpg"
+      ],
+      "featured": 1,
+      "purchase": 13,
+      "idCate": 9,
+      "brand": "Lenovo"
+    },
+    {
+      "id": 13,
+      "nameProduct": "LG Gram 2023 14Z90R-G.AH53A5 - i5-1340P",
+      "image": "lap-4/laptop-4.jpg",
+      "price": 32490000,
+      "sale": 0,
+      "imagesNav": [
+        "lap-4/de-1.jpg",
+        "lap-4/de-2.jpg",
+        "lap-4/de-3.jpg",
+        "lap-4/de-4.jpg",
+        "lap-4/de-5.jpg",
+        "lap-4/de-6.jpg",
+        "lap-4/de-7.jpg"
+      ],
+      "imagesZoom": [
+        "lap-4/zoom-1.jpg",
+        "lap-4/zoom-2.jpg",
+        "lap-4/zoom-3.jpg",
+        "lap-4/zoom-4.jpg",
+        "lap-4/zoom-5.jpg",
+        "lap-4/zoom-6.jpg",
+        "lap-4/zoom-7.jpg"
+      ],
+      "featured": 1,
+      "purchase": 6,
+      "idCate": 2,
+      "brand": "LG"
+    },
+    {
+      "id": 14,
+      "nameProduct": "Razer DeathStalker V2 Pro TKL - Keyboard Linear Red Switch",
+      "image": "key-2/key-2.jpg",
+      "price": 4790000,
+      "sale": 0.15,
+      "imagesNav": [
+        "key-2/de-1.jpg",
+        "key-2/de-2.jpg",
+        "key-2/de-3.jpg",
+        "key-2/de-4.jpg",
+        "key-2/de-5.jpg",
+        "key-2/de-6.jpg"
+      ],
+      "imagesZoom": [
+        "key-2/zoom-1.png",
+        "key-2/zoom-2.png",
+        "key-2/zoom-3.png",
+        "key-2/zoom-4.png",
+        "key-2/zoom-5.png",
+        "key-2/zoom-6.png"
+      ],
+      "featured": 1,
+      "purchase": 16,
+      "idCate": 9,
+      "brand": "Razer"
+    },
+    {
+      "id": 15,
+      "nameProduct": "Razer BlackWidow V4 Pro - Yellow Switch - US Layout - FRML",
+      "image": "key-3/key-3.jpg",
+      "price": 6199000,
+      "sale": 0,
+      "imagesNav": [
+        "key-3/de-1.jpg",
+        "key-3/de-2.jpg",
+        "key-3/de-3.jpg",
+        "key-3/de-4.jpg"
+      ],
+      "imagesZoom": [
+        "key-3/zoom-1.png",
+        "key-3/zoom-2.png",
+        "key-3/zoom-3.png",
+        "key-3/zoom-4.png"
+      ],
+      "featured": 1,
+      "purchase": 3,
+      "idCate": 9,
+      "brand": "Razer"
+    },
+    {
+      "id": 16,
+      "nameProduct": "Dahua DHI-LM27-E230C - 27in FHD VA Cong",
+      "image": "pc-5/pd-5.jpg",
+      "price": 3650000,
+      "sale": 0.1,
+      "imagesNav": [
+        "pc-5/de-1.jpg",
+        "pc-5/de-2.jpg",
+        "pc-5/de-3.jpg"
+      ],
+      "imagesZoom": [
+        "pc-5/pc-1.jpg",
+        "pc-5/pc-2.jpg",
+        "pc-5/pc-3.jpg"
+      ],
+      "featured": 0,
+      "purchase": 24,
+      "idCate": 1,
+      "brand": "Dahua"
+    },
+    {
+      "id": 17,
+      "nameProduct": "LG UltraGear 48GQ900-B.ATV - 48in OLED UHD 4K 120Hz",
+      "image": "pc-6/pd-6.jpg",
+      "price": 29490000,
+      "sale": 0.1,
+      "imagesNav": [
+        "pc-6/de-1.jpg",
+        "pc-6/de-2.jpg",
+        "pc-6/de-3.jpg",
+        "pc-6/de-4.jpg",
+        "pc-6/de-5.jpg"
+      ],
+      "imagesZoom": [
+        "pc-6/pc-1.jpg",
+        "pc-6/pc-2.jpg",
+        "pc-6/pc-3.jpg",
+        "pc-6/pc-4.jpg",
+        "pc-6/pc-5.jpg"
+      ],
+      "featured": 1,
+      "purchase": 18,
+      "idCate": 1,
+      "brand": "LG"
+    },
+    {
+      "id": 18,
+      "nameProduct": "Màn hình di động Viewsonic VP16 - 15.6in FHD OLED USB-C",
+      "image": "pc-7/pd-7.jpg",
+      "price": 13990000,
+      "sale": 0,
+      "imagesNav": [
+        "pc-7/de-1.jpg",
+        "pc-7/de-2.jpg",
+        "pc-7/de-3.jpg",
+        "pc-7/de-4.jpg",
+        "pc-7/de-5.jpg",
+        "pc-7/de-6.jpg",
+        "pc-7/de-7.jpg",
+        "pc-7/de-8.jpg",
+        "pc-7/de-9.jpg"
+      ],
+      "imagesZoom": [
+        "pc-7/pc-1.jpg",
+        "pc-7/pc-2.jpg",
+        "pc-7/pc-3.jpg",
+        "pc-7/pc-4.jpg",
+        "pc-7/pc-5.jpg",
+        "pc-7/pc-6.jpg",
+        "pc-7/pc-7.jpg",
+        "pc-7/pc-8.jpg",
+        "pc-7/pc-9.jpg"
+      ],
+      "featured": 1,
+      "purchase": 7,
+      "idCate": 1,
+      "brand": "ViewSonic"
+    },
+    {
+      "id": 19,
+      "nameProduct": "Máy đọc sách Onyx Boox Note Air 2 Plus",
+      "image": "read-2/read-2.jpg",
+      "price": 13990000,
+      "sale": 0.2,
+      "imagesNav": [
+        "read-2/de-1.jpg",
+        "read-2/de-2.jpg",
+        "read-2/de-3.jpg",
+        "read-2/de-4.jpg",
+        "read-2/de-5.jpg",
+        "read-2/de-6.jpg"
+      ],
+      "imagesZoom": [
+        "read-2/zoom-1.jpg",
+        "read-2/zoom-2.jpg",
+        "read-2/zoom-3.jpg",
+        "read-2/zoom-4.jpg",
+        "read-2/zoom-5.jpg",
+        "read-2/zoom-6.jpg"
+      ],
+      "featured": 0,
+      "purchase": 20,
+      "idCate": 8,
+      "brand": "Amazon"
+    },
+    {
+      "id": 20,
+      "nameProduct": "Garmin Venu SQ 2 - Metallic Mint Aluminum Bezel",
+      "image": "watch-3/watch-3.jpg",
+      "price": 6490000,
+      "sale": 0,
+      "imagesNav": [
+        "watch-3/de-1.jpg",
+        "watch-3/de-2.jpg",
+        "watch-3/de-3.jpg",
+        "watch-3/de-4.jpg",
+        "watch-3/de-5.jpg",
+        "watch-3/de-6.jpg"
+      ],
+      "imagesZoom": [
+        "watch-3/zoom-1.jpg",
+        "watch-3/zoom-2.jpg",
+        "watch-3/zoom-3.jpg",
+        "watch-3/zoom-4.jpg",
+        "watch-3/zoom-5.jpg",
+        "watch-3/zoom-6.jpg"
+      ],
+      "featured": 0,
+      "purchase": 15,
+      "idCate": 4,
+      "brand": "Garmin"
+    },
+    {
+      "id": 21,
+      "nameProduct": "Garmin Approach R10",
+      "image": "watch-4/watch-4.jpg",
+      "price": 16290000,
+      "sale": 0.15,
+      "imagesNav": [
+        "watch-4/de-1.jpg",
+        "watch-4/de-2.jpg",
+        "watch-4/de-3.jpg",
+        "watch-4/de-4.jpg",
+        "watch-4/de-5.jpg",
+        "watch-4/de-6.jpg"
+      ],
+      "imagesZoom": [
+        "watch-4/zoom-1.jpg",
+        "watch-4/zoom-2.jpg",
+        "watch-4/zoom-3.jpg",
+        "watch-4/zoom-4.jpg",
+        "watch-4/zoom-5.jpg",
+        "watch-4/zoom-6.jpg"
+      ],
+      "featured": 1,
+      "purchase": 17,
+      "idCate": 4,
+      "brand": "Garmin"
+    },
+    {
+      "nameProduct": "dadsdasd123",
+      "image": "pc-2/pd-2.jpg",
+      "price": "1999000",
+      "sale": "0.3",
+      "imagesNav": [],
+      "iamgesZoom": [],
+      "featured": "1",
+      "purchase": "0",
+      "idCate": "2",
+      "brand": "LG1",
+      "id": 22
+    },
+    {
+      "nameProduct": "Ốp lưng",
+      "image": "pc-2/pd-2.jpg",
+      "price": "120000",
+      "sale": "0.3",
+      "imagesNav": [],
+      "iamgesZoom": [],
+      "featured": "1",
+      "purchase": "0",
+      "idCate": "9",
+      "brand": "iphone",
+      "id": 23
+    }
+  ],
+  "users": [
+    {
+      "idUser": 1,
+      "email": "tin@gmail.com",
+      "password": "tin123",
+      "fullName": "Lê Trung Tín",
+      "avatar": "./img/users/user.jpg",
+      "sex": "Nam",
+      "phoneNumber": "0123456789",
+      "address": "TP Hồ Chí Minh"
+    },
+    {
+      "idUser": 2,
+      "email": "admin@gmail.com",
+      "password": "admin123",
+      "fullName": "Admin",
+      "avatar": "./img/users/admin.jpg",
+      "sex": "",
+      "phoneNumber": "",
+      "address": ""
+    }
+  ]
+}

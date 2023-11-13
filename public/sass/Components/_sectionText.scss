@@ -1,0 +1,17 @@
+.section-text {
+  font-size: $fs-2;
+  font-weight: $fw-4;
+  color: $color-black-0;
+  padding-bottom: $pd-5;
+  margin-bottom: $mg-1;
+  text-transform: capitalize;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 35px;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background-color: $color-blue-1;
+  }
+}

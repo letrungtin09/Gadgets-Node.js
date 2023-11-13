@@ -1,0 +1,86 @@
+.login {
+  .login__form {
+    form {
+      .login__content {
+        margin-bottom: $mg-4;
+        input[type="email"] {
+          margin-bottom: $mg-5;
+        }
+      }
+      .login__save {
+        margin-bottom: $mg-2;
+        display: flex;
+        align-items: center;
+        label {
+          font-weight: $fw-1;
+        }
+        input[type="checkbox"] {
+          width: 15px;
+          height: 15px;
+          margin-right: $mg-2;
+          &:focus {
+            box-shadow: none;
+          }
+        }
+      }
+      .login__btn {
+        margin-bottom: $mg-4;
+      }
+      .login__forget {
+        padding: $pd-5 0;
+        border-bottom: 1px solid $color-gray-1;
+        text-align: center;
+        a {
+          text-decoration: none;
+          color: $color-blue-1;
+          font-weight: $fw-2;
+        }
+      }
+      .login__register {
+        padding: $pd-5 0;
+        text-align: center;
+        a {
+          text-decoration: none;
+          color: $color-blue-1;
+          font-weight: $fw-2;
+        }
+      }
+      .login__social {
+        a {
+          display: inline-block;
+          width: 100%;
+          text-align: center;
+          text-decoration: none;
+          padding: $pd-1 - 1 0;
+          text-transform: capitalize;
+          font-weight: $fw-2;
+        }
+        .login__facebook {
+          a {
+            border: 1px solid $color-blue-3;
+            border-radius: 50px;
+            margin: $mg-4 0 $mg-2;
+            color: $color-blue-3;
+            transition: 0.3s;
+            &:hover {
+              background-color: $color-blue-3;
+              color: $color-white-0;
+            }
+          }
+        }
+        .login__google {
+          a {
+            border: 1px solid $color-red-1;
+            border-radius: 50px;
+            color: $color-red-1;
+            transition: 0.3s;
+            &:hover {
+              background-color: $color-red-1;
+              color: $color-white-0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
