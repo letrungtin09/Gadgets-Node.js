@@ -9,8 +9,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <!-- SLICK CSS -->
-    <link rel="stylesheet" href="./css/slick.css">
-    <link rel="stylesheet" href="./css/slick-theme.css">
+    <link rel="stylesheet" href="/css/slick.css">
+    <link rel="stylesheet" href="/css/slick-theme.css">
     <!-- FONT AWSOME -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <!-- GG FONT -->
@@ -19,8 +19,10 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap"
         rel="stylesheet">
+    <!-- FANCYBOX CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
     <!-- MAIN CSS -->
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="/css/main.css">
 </head>
 
 <body>
@@ -29,7 +31,7 @@
         <div class="header__top">
             <nav class="gadgetsNavbar navbar navbar-expand-lg">
                 <div class="container">
-                    <a class="navbar-brand" href="index.html"><img src="./img/logo-light.svg" alt=""></a>
+                    <a class="navbar-brand" href="/"><img src="/images/logo-light.svg" alt=""></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#gadgetsNavbarContent" aria-controls="gadgetsNavbarContent"
                         aria-expanded="false" aria-label="Toggle navigation">
@@ -41,7 +43,7 @@
                                 <a class="nav-link" href="#">TIN TỨC</a>
                             </li>
                             <li class="nav-item ms-2">
-                                <a class="nav-link" href="allProduct.html">SẢN PHẨM</a>
+                                <a class="nav-link" href="/allProduct">SẢN PHẨM</a>
                             </li>
                         </ul>
                         <form class="header__form d-flex" id="form-searchPd" role="search">
@@ -58,7 +60,7 @@
                                 </a>
                             </div>
                             <div class="right-login">
-                                <a class="right-link" href="login.html">
+                                <a class="right-link" href="/login">
                                     <i class="fa fa-user"></i>
                                 </a>
                             </div>
@@ -76,7 +78,28 @@
                                         <div class="cart-list">
                                             <div class="item">
                                                 <div class="cart-item">
-                                                    <a class="imgPd" href="#"><img src="./img/products/lap-2/de-1.jpg"
+                                                    <a class="imgPd" id="imgPd" href="#"><img
+                                                            src="/images/products/lap-2/de-1.jpg" alt=""></a>
+                                                    <div class="info-item">
+                                                        <a class="namePd" id="namePd" href="#">Dell Vostro 3430 -
+                                                            i7-1355U - 16GB -
+                                                            512GB SSD</a>
+                                                        <div class="amount">
+                                                            <span>Số lượng: </span>
+                                                            <input type="number" name="quantity" id="quantity" min="1"
+                                                                max="10" value="">
+                                                        </div>
+                                                        <div class="price">
+                                                            <div class="price-new"><span id="cartPrice">16.990.00</span>
+                                                                <span class="vnd">đ</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="item">
+                                                <div class="cart-item">
+                                                    <a class="imgPd" href="#"><img src="/images/products/lap-2/de-1.jpg"
                                                             alt=""></a>
                                                     <div class="info-item">
                                                         <a class="namePd" href="#">Dell Vostro 3430 - i7-1355U - 16GB -
@@ -95,26 +118,7 @@
                                             </div>
                                             <div class="item">
                                                 <div class="cart-item">
-                                                    <a class="imgPd" href="#"><img src="./img/products/lap-2/de-1.jpg"
-                                                            alt=""></a>
-                                                    <div class="info-item">
-                                                        <a class="namePd" href="#">Dell Vostro 3430 - i7-1355U - 16GB -
-                                                            512GB SSD</a>
-                                                        <div class="amount">
-                                                            <span>Số lượng: </span>
-                                                            <input type="number" name="quantity" id="quantity" min="1"
-                                                                max="10">
-                                                        </div>
-                                                        <div class="price">
-                                                            <div class="price-new">16.990.00 <span class="vnd">đ</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="item">
-                                                <div class="cart-item">
-                                                    <a class="imgPd" href="#"><img src="./img/products/lap-2/de-1.jpg"
+                                                    <a class="imgPd" href="#"><img src="/images/products/lap-2/de-1.jpg"
                                                             alt=""></a>
                                                     <div class="info-item">
                                                         <a class="namePd" href="#">Dell Vostro 3430 - i7-1355U - 16GB -
@@ -153,119 +157,15 @@
             <nav class="header__menu">
                 <div class="container">
                     <ul class="menu-list d-flex">
-                        <script src="js/category/categories.js"></script>
+                        <% for(let cate of catelog) { %>
+                            <li class="menu-item">
+                                <a class="menu-link" href="/category/<%= cate.idCategory %>"><span>
+                                        <%= cate.nameCategory %>
+                                    </span></a>
+                            </li>
+                            <% } %>
                     </ul>
                 </div>
             </nav>
         </div>
     </header>
-    <!-- FEATURED -->
-    <section class="detailCate">
-        <div class="container">
-            <div class="detail-navBar">
-                <ul>
-                    <li><a href="index.html">Trang chủ</a></li>
-                    <li id="cate-name"></li>
-                </ul>
-            </div>
-            <div class="detailCate__content">
-                <h2 class="section-text" id="name-category"></h2>
-                <div class="detailCate__list">
-                </div>
-                <script src="./js/category/cateProduct.js"></script>
-            </div>
-        </div>
-    </section>
-    <!-- FOOTER -->
-    <footer>
-        <div class="container">
-            <div class="footer__content">
-                <div class="footer__row">
-                    <div class="footer__social">
-                        <div class="footer__logo">
-                            <a href="#"><img src="./img/logo-light.svg" alt=""></a>
-                        </div>
-                        <ul class="footer__contact">
-                            <li><span>Địa chỉ: </span>QTSC9, Tô Ký, Quận 12, TP Hồ Chí Minh</li>
-                            <li><span>Hotline: </span>1900 7777</li>
-                            <li><span>Thời gian làm việc: </span>8h đến 21h</li>
-                        </ul>
-                        <div class="footer__icon">
-                            <a href="#"><i style="color: #0766ff;" class="fab fa-facebook-f"></i></a>
-                            <a href="#"><i style="color: #0077b5;" class="fab fa-linkedin-in"></i></a>
-                            <a href="#"><i style="color: #179cf0;" class="fa-brands fa-twitter"></i></a>
-                            <a href="#"><i style="color: #ff0000;" class="fa-brands fa-youtube"></i></a>
-                        </div>
-                    </div>
-                    <div class="footer__info">
-                        <h5>Thông tin hữu ích</h5>
-                        <ul>
-                            <li><a href="">Về Gadgets</a></li>
-                            <li><a href="">Liên hệ chúng tôi</a></li>
-                            <li><a href="">Tin tức</a></li>
-                            <li><a href="">Tuyển dụng</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer__support">
-                        <h5>Hỗ trợ khách hàng</h5>
-                        <ul>
-                            <li><a href="">Điều khoản sử dụng</a></li>
-                            <li><a href="">Chính sách bảo mật</a></li>
-                            <li><a href="">Quy định bảo hành</a></li>
-                            <li><a href="">Chính sách hoàn tiền</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer__payment">
-                        <h5>Phương thức thanh toán</h5>
-                        <div class="footer__img">
-                            <div class="img-item">
-                                <img src="./img/payment/ft-img6.png" alt="">
-                            </div>
-                            <div class="img-item">
-                                <img src="./img/payment/ft-img7.png" alt="">
-                            </div>
-                            <div class="img-item">
-                                <img src="./img/payment/ft-img8.png" alt="">
-                            </div>
-                            <div class="img-item">
-                                <img src="./img/payment/ft-imgamex.png" alt="">
-                            </div>
-                            <div class="img-item">
-                                <img src="./img/payment/ft-img10.png" alt="">
-                            </div>
-                            <div class="img-item">
-                                <img src="./img/payment/ft-img11.png" alt="">
-                            </div>
-                            <div class="img-item">
-                                <img src="./img/payment/ft-img12.png" alt="">
-                            </div>
-                            <div class="img-item">
-                                <img src="./img/payment/ft-img14.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="footer__copyright">
-                <p class="footer__lttin">&copy; Copyright 2023 Gadgets. All rights reserved | Design by
-                    <a href="#">LTTin</a>
-                </p>
-            </div>
-        </div>
-    </footer>
-
-
-    <!-- jquery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.4.1/jquery-migrate.min.js"></script>
-    <!-- BS5 JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-        crossorigin="anonymous"></script>
-    <!-- SLICK JS -->
-    <script src="./js/slick.min.js"></script>
-    <!-- MAIN JS -->
-    <script src="js/main.js"></script>
-</body>
-
-</html>

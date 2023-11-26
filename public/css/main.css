@@ -1237,7 +1237,7 @@ footer .footer__copyright .footer__lttin a {
 .productIntro .productIntro__info .productIntro__slick .productIntro__nav .slick-prev::before {
   opacity: 1;
   content: "";
-  background-image: url(../../img/btn-up.png);
+  background-image: url(../../images/btn-up.png);
   display: inline-block;
   width: 18px;
   height: 18px;
@@ -1253,7 +1253,7 @@ footer .footer__copyright .footer__lttin a {
 .productIntro .productIntro__info .productIntro__slick .productIntro__nav .slick-next::before {
   opacity: 1;
   content: "";
-  background-image: url(../../img/btn-down.png);
+  background-image: url(../../images/btn-down.png);
   display: inline-block;
   width: 18px;
   height: 18px;
