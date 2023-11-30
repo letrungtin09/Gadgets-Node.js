@@ -119,8 +119,8 @@
                 <ul class="nav nav-tabs" id="gadgetsTab" role="tablist">
                     <li class="nav-item" role="presentation">
                         <button class="nav-link active" id="all-tab" data-bs-toggle="tab" data-bs-target="#all-tab-pane"
-                            type="button" role="tab" aria-controls="all-tab-pane" aria-selected="true">Tất cả sản
-                            phẩm</button>
+                            type="button" role="tab" aria-controls="all-tab-pane" aria-selected="true">Sản phẩm mới
+                            nhất</button>
                     </li>
                     <li class="nav-item" role="presentation">
                         <button class="nav-link selling" id="selling-tab" data-bs-toggle="tab"
@@ -138,7 +138,7 @@
                     <div class="tab-pane fade show active" id="all-tab-pane" role="tabpanel" aria-labelledby="all-tab"
                         tabindex="0">
                         <div class="bestseller__all">
-                            <% for(let pd of top5){ %>
+                            <% for(let pd of newPD){ %>
                                 <div class="all-item" id="${i + 1}">
                                     <a class="bestseller__card" href="/detailProduct/<%= pd.idProduct %>">
                                         <div class="card">
@@ -161,41 +161,45 @@
                     <div class="tab-pane fade" id="selling-tab-pane" role="tabpanel" aria-labelledby="selling-tab"
                         tabindex="0">
                         <div class="bestseller__selling">
-                            <div class="selling-item">
-                                <a class="bestseller__card" href="">
-                                    <div class="card">
-                                        <img src="/images/products/key-3/key-3.jpg" class="card-img-top" alt="...">
-                                        <div class="card-body">
-                                            <h5 class="card-title">fhfghhf</h5>
-                                            <div class="card-discount d-flex align-items-end">
-                                                <p class="card-new">123123<span class="vnd">đ</span></p>
-                                                <span class="card-sale">Sale 23%</span>
+                            <% for(let pd of top10PD){ %>
+                                <div class="selling-item">
+                                    <a class="bestseller__card" href="">
+                                        <div class="card">
+                                            <img src="/images/products/key-3/key-3.jpg" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title">fhfghhf</h5>
+                                                <div class="card-discount d-flex align-items-end">
+                                                    <p class="card-new">123123<span class="vnd">đ</span></p>
+                                                    <span class="card-sale">Sale 23%</span>
+                                                </div>
+                                                <p class="card-old">3424234<span class="vnd">đ</span></p>
                                             </div>
-                                            <p class="card-old">3424234<span class="vnd">đ</span></p>
                                         </div>
-                                    </div>
-                                </a>
-                            </div>
+                                    </a>
+                                </div>
+                                <% } %>
                         </div>
                     </div>
                     <div class="tab-pane fade" id="promotion-tab-pane" role="tabpanel" aria-labelledby="promotion-tab"
                         tabindex="0">
                         <div class="bestseller__promotion">
-                            <div class="promotion-item">
-                                <a class="bestseller__card" href="#">
-                                    <div class="card">
-                                        <img src="/images/products/key-2/key-2.jpg" class="card-img-top" alt="...">
-                                        <div class="card-body">
-                                            <h5 class="card-title">bccbvbcbcvb</h5>
-                                            <div class="card-discount d-flex align-items-end">
-                                                <p class="card-new">213213<span class="vnd">đ</span></p>
-                                                <span class="card-sale">Sale 12%</span>
+                            <% for(let pd of salePD){ %>
+                                <div class="promotion-item">
+                                    <a class="bestseller__card" href="#">
+                                        <div class="card">
+                                            <img src="/images/products/key-2/key-2.jpg" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title">bccbvbcbcvb</h5>
+                                                <div class="card-discount d-flex align-items-end">
+                                                    <p class="card-new">213213<span class="vnd">đ</span></p>
+                                                    <span class="card-sale">Sale 12%</span>
+                                                </div>
+                                                <p class="card-old">3324234<span class="vnd">đ</span></p>
                                             </div>
-                                            <p class="card-old">3324234<span class="vnd">đ</span></p>
                                         </div>
-                                    </div>
-                                </a>
-                            </div>
+                                    </a>
+                                </div>
+                                <% } %>
                         </div>
                     </div>
                 </div>
@@ -232,21 +236,22 @@
             <div class="featured__content">
                 <h2 class="section-text">Sản phẩm đặc biệt</h2>
                 <div class="featured__list">
-                    <a class="featured__item text-decoration-none" href="#">
-                        <div class="card">
-                            <img src="/images/products/lap-1/laptop-1.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">nbnbnnnn</h5>
-                                <div class="card-discount d-flex align-items-end">
-                                    <p class="card-new">123213<span class="vnd">đ</span></p>
-                                    <span class="card-sale">Sale 12%</span>
+                    <% for(let pd of featuredPD){ %>
+                        <a class="featured__item text-decoration-none" href="#">
+                            <div class="card">
+                                <img src="/images/products/lap-1/laptop-1.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">nbnbnnnn</h5>
+                                    <div class="card-discount d-flex align-items-end">
+                                        <p class="card-new">123213<span class="vnd">đ</span></p>
+                                        <span class="card-sale">Sale 12%</span>
+                                    </div>
+                                    <p class="card-old">34343434<span class="vnd">đ</span></p>
                                 </div>
-                                <p class="card-old">34343434<span class="vnd">đ</span></p>
                             </div>
-                        </div>
-                    </a>
+                        </a>
+                        <% } %>
                 </div>
-
             </div>
         </div>
     </section>

@@ -7,8 +7,8 @@
                 <ul>
                     <li><a href="index.html">Trang chủ</a></li>
                     <li id="cate-product">
-                        <% for(let cate of catelog){ %>
-                            <% if(cate.idCategory==product[0].idCategory){ %>
+                        <% for(let cate of category){ %>
+                            <% if(cate.idCategory==detail[0].idCategory){ %>
                                 <a href="#">
                                     <%= cate.nameCategory %>
                                 </a>
@@ -16,8 +16,8 @@
                                     <% } %>
                     </li>
                     <li id="name-product">
-                        <a href="/detailProduct/<%= product[0].idProduct %>">
-                            <%= product[0].nameProduct %>
+                        <a href="/detailProduct/<%= detail[0].idProduct %>">
+                            <%= detail[0].nameProduct %>
                         </a>
                     </li>
                 </ul>
@@ -55,7 +55,7 @@
                         <div class="productIntro__detail">
                             <div class="productIntro__top">
                                 <h1>
-                                    <%= product[0].nameProduct %>
+                                    <%= detail[0].nameProduct %>
                                 </h1>
                                 <div class="productIntro__below">
                                     <div class="productIntro__brand">
@@ -72,10 +72,10 @@
                                 <div class="col-7">
                                     <div class="productIntro__price">
                                         <div class="price-new">
-                                            <%= product[0].price %> <span class="vnd">đ</span>
+                                            <%= detail[0].price %> <span class="vnd">đ</span>
                                         </div>
                                         <div class="price-old">
-                                            <%= product[0].price %> <span class="vnd">đ</span>
+                                            <%= detail[0].price %> <span class="vnd">đ</span>
                                         </div>
                                         <div class="price-des">(Đã bao gồm VAT)</div>
                                     </div>
