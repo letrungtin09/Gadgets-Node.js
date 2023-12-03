@@ -1,0 +1,50 @@
+<%- include('../partials/header') %>
+
+    <section class="showAllPd">
+        <div class="container">
+            <div class="detail-navBar">
+                <ul>
+                    <li><a href="/">Trang chủ</a></li>
+                    <li id="all-pd"><a href="/allProduct">Tất cả sản phẩm</a></li>
+                </ul>
+            </div>
+            <div class="showAllPd__content">
+                <h2 class="section-text">Tất cả sản phẩm</h2>
+                <div class="showAllPd__list">
+                    <% for(let pd of products){ %>
+                        <a class="showAllPd__item text-decoration-none" href="/detailProduct/<%= pd.idProduct %>">
+                            <div class="card">
+                                <img src="/images/products/<%= Buffer.from(pd.image, `utf-8`).toString(`utf-8`) %>"
+                                    class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        <%= pd.nameProduct %>
+                                    </h5>
+                                    <% if(pd.sale==0){ %>
+                                        <div class="card-discount d-flex align-items-end">
+                                            <p class="card-new">
+                                                <%= (pd.price).toLocaleString() %><span class="vnd">đ</span>
+                                            </p>
+                                        </div>
+                                        <% }else{ %>
+                                            <div class="card-discount d-flex align-items-end">
+                                                <p class="card-new">
+                                                    <%= (pd.price - (pd.price*pd.sale)).toLocaleString() %><span
+                                                            class="vnd">đ</span>
+                                                </p>
+                                                <span class="card-sale">Sale <%= pd.sale*100 %>%</span>
+                                            </div>
+                                            <p class="card-old">
+                                                <%= (pd.price).toLocaleString() %><span class="vnd">đ</span>
+                                            </p>
+                                            <% } %>
+                                </div>
+                            </div>
+                        </a>
+                        <% } %>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <%- include('../partials/footer') %>

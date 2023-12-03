@@ -52,6 +52,13 @@
                             <button id="header__btnSearch" class="header__btn" type="button"><i
                                     class="fa fa-search"></i></button>
                         </form>
+                        <script>
+                            let getBtn = document.getElementById("header__btnSearch");
+                            let getInput = document.getElementById("header__inputSearch");
+                            getBtn.addEventListener("click", function () {
+                                window.location.href = `/searchProduct/${getInput.value}`;
+                            });
+                        </script>
                         <div class="header__right d-flex">
                             <div class="right-check">
                                 <a class="right-link" href="">
@@ -60,7 +67,7 @@
                                 </a>
                             </div>
                             <div class="right-login">
-                                <a class="right-link" href="/login">
+                                <a class="right-link" href="/admin">
                                     <i class="fa fa-user"></i>
                                 </a>
                             </div>
@@ -159,7 +166,7 @@
                     <ul class="menu-list d-flex">
                         <% for(let cate of category) { %>
                             <li class="menu-item">
-                                <a class="menu-link" href="/category/<%= cate.idCategory %>"><span>
+                                <a class="menu-link" href="/cateProduct/<%= cate.idCategory %>"><span>
                                         <%= cate.nameCategory %>
                                     </span></a>
                             </li>

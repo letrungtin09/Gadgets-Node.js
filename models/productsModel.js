@@ -78,6 +78,18 @@ class ProductModel {
     }
   }
 
+  // Tìm kiếm sản phẩm
+  async searchPD(keywords) {
+    let sql = `SELECT * FROM products pd JOIN categories cate ON cate.idCategory = pd.idCategory WHERE pd.nameProduct LIKE ? OR cate.nameCategory LIKE ?`;
+    try {
+      let data = await useValueSQL(db, sql, keywords);
+      return data;
+    } catch (err) {
+      console.error(err);
+    }
+  }
+
+  // Thêm sản phẩm mới
   //   async postProduct(values) {
   //     let sql =
   //       "INSERT INTO products(nameProduct, images, description, priceProduct, authorProduct, idCategory) VALUES (?,?,?,?,?,?)";
@@ -88,6 +100,7 @@ class ProductModel {
   //     }
   //   }
 
+  // Cập nhật thông tin sản phẩm
   //   async postUpdateProduct(values) {
   //     let sql =
   //       "UPDATE products SET nameProduct=?, images=?, description=?, priceProduct=?, authorProduct=?, idCategory=? WHERE idProduct = ?";

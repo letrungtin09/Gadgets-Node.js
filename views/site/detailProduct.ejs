@@ -5,7 +5,7 @@
         <div class="container">
             <div class="detail-navBar">
                 <ul>
-                    <li><a href="index.html">Trang chủ</a></li>
+                    <li><a href="/">Trang chủ</a></li>
                     <li id="cate-product">
                         <% for(let cate of category){ %>
                             <% if(cate.idCategory==detail[0].idCategory){ %>
@@ -26,29 +26,31 @@
                 <div class="row">
                     <div class="col-5">
                         <div class="productIntro__slick">
-                            <div class="productIntro__promotion">Sale 10%</div>
-                            <div class="productIntro__nav">
-                                <% for(let img of arrImgNav){ %>
-                                    <div class="nav--item">
-                                        <div class="item--img">
-                                            <img src="/images/products/<%= img %>" alt="">
-                                        </div>
+                            <% if(detail[0].sale !=0){ %>
+                                <div class="productIntro__promotion">Sale <%= detail[0].sale * 100 %>%</div>
+                                <% } %>
+                                    <div class="productIntro__nav">
+                                        <% for(let img of arrImgNav){ %>
+                                            <div class="nav--item">
+                                                <div class="item--img">
+                                                    <img src="/images/products/<%= img %>" alt="">
+                                                </div>
+                                            </div>
+                                            <% } %>
                                     </div>
-                                    <% } %>
-                            </div>
-                            <div class="productIntro__slide">
-                                <% for(let img of arrImgZoom){ %>
-                                    <div class="slide--item">
-                                        <a href="/images/products/<%= img %>" data-fancybox="gallery">
-                                            <img src="/images/products/<%= img %>" alt="">
-                                        </a>
+                                    <div class="productIntro__slide">
+                                        <% for(let img of arrImgZoom){ %>
+                                            <div class="slide--item">
+                                                <a href="/images/products/<%= img %>" data-fancybox="gallery">
+                                                    <img src="/images/products/<%= img %>" alt="">
+                                                </a>
+                                            </div>
+                                            <% } %>
                                     </div>
-                                    <% } %>
-                            </div>
-                            <div class="productIntro__des">
-                                <img src="/images/zoom-in.png" alt="">
-                                <span>Bấm vào để xem ảnh phóng to</span>
-                            </div>
+                                    <div class="productIntro__des">
+                                        <img src="/images/zoom-in.png" alt="">
+                                        <span>Bấm vào để xem ảnh phóng to</span>
+                                    </div>
                         </div>
                     </div>
                     <div class="col-7">
@@ -60,7 +62,9 @@
                                 <div class="productIntro__below">
                                     <div class="productIntro__brand">
                                         <span>Thương hiệu: </span>
-                                        <a href="#">LG</a>
+                                        <a href="#">
+                                            <%= detail[0].brand %>
+                                        </a>
                                     </div>
                                     <div class="productIntro__id">
                                         <span>Mã Sản phẩm: </span>
@@ -71,13 +75,20 @@
                             <div class="row productIntro__detailPrice">
                                 <div class="col-7">
                                     <div class="productIntro__price">
-                                        <div class="price-new">
-                                            <%= detail[0].price %> <span class="vnd">đ</span>
-                                        </div>
-                                        <div class="price-old">
-                                            <%= detail[0].price %> <span class="vnd">đ</span>
-                                        </div>
-                                        <div class="price-des">(Đã bao gồm VAT)</div>
+                                        <% if(detail[0].sale==0){ %>
+                                            <div class="price-new">
+                                                <%= (detail[0].price).toLocaleString() %> <span class="vnd">đ</span>
+                                            </div>
+                                            <% }else{ %>
+                                                <div class="price-new">
+                                                    <%= (detail[0].price - (detail[0].price *
+                                                        detail[0].sale)).toLocaleString() %> <span class="vnd">đ</span>
+                                                </div>
+                                                <div class="price-old">
+                                                    <%= (detail[0].price).toLocaleString() %> <span class="vnd">đ</span>
+                                                </div>
+                                                <% } %>
+                                                    <div class="price-des">(Đã bao gồm VAT)</div>
                                     </div>
                                     <div class="productIntro__guarantee">
                                         <span>Bảo hành: 12 tháng. </span><a href="#">(Quy định bảo hành)</a>
@@ -119,6 +130,39 @@
                 <div class="productIntro__other">
                     <h5 class="other-title">Sản phẩm tương tự</h5>
                     <div class="other-slider">
+                        <% for(let pd of productCate){ %>
+                            <div class="slider-item">
+                                <a class="other-card text-decoration-none" href="/detailProduct/<%= pd.idProduct %>">
+                                    <div class="card">
+                                        <img src="/images/products/<%= Buffer.from(pd.image, `utf-8`).toString(`utf-8`) %>"
+                                            class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title">
+                                                <%= pd.nameProduct %>
+                                            </h5>
+                                            <% if(pd.sale==0){ %>
+                                                <div class="card-discount d-flex align-items-end">
+                                                    <p class="card-new">
+                                                        <%= (pd.price).toLocaleString() %><span class="vnd">đ</span>
+                                                    </p>
+                                                </div>
+                                                <% } else { %>
+                                                    <div class="card-discount d-flex align-items-end">
+                                                        <p class="card-new">
+                                                            <%= (pd.price - (pd.price*pd.sale)).toLocaleString() %><span
+                                                                    class="vnd">đ</span>
+                                                        </p>
+                                                        <span class="card-sale">Sale <%= pd.sale*100 %>%</span>
+                                                    </div>
+                                                    <p class="card-old">
+                                                        <%= (pd.price).toLocaleString() %><span class="vnd">đ</span>
+                                                    </p>
+                                                    <% } %>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <% } %>
                     </div>
                 </div>
             </div>

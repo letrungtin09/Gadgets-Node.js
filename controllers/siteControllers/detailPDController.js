@@ -15,6 +15,7 @@ class DetailPDController {
     try {
       let getCate = await categoryModel.getAllCate();
       let getPD = await productModel.getPDId(idPD);
+      let getPDCate = await productModel.getPDCate(getPD[0].idCategory);
 
       const imgNav = bufferJson(getPD[0].imagesNav);
       const arrImgNav = imgNav.imagesNav;
@@ -25,6 +26,7 @@ class DetailPDController {
       res.render("site/detailProduct", {
         category: getCate,
         detail: getPD,
+        productCate: getPDCate,
         arrImgNav,
         arrImgZoom,
       });

@@ -31,7 +31,7 @@ body {
   display: inline-block;
   width: 19px;
   height: 19px;
-  background-image: url(../../img/btn-prev.png);
+  background-image: url(../../images/btn-prev.png);
   background-position: 50%;
   background-size: contain;
   background-repeat: no-repeat;
@@ -59,7 +59,7 @@ body {
   display: inline-block;
   width: 19px;
   height: 19px;
-  background-image: url(../../img/btn-next.png);
+  background-image: url(../../images/btn-next.png);
   background-position: 50%;
   background-size: contain;
   background-repeat: no-repeat;

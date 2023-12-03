@@ -177,14 +177,8 @@
       "image": "key-1/key-1.jpg",
       "price": 1090000,
       "sale": 0.1,
-      "imagesNav": [
-        "key-1/de-1.jpg",
-        "key-1/de-2.jpg"
-      ],
-      "imagesZoom": [
-        "key-1/zoom-1.png",
-        "key-1/zoom-2.png"
-      ],
+      "imagesNav": ["key-1/de-1.jpg", "key-1/de-2.jpg"],
+      "imagesZoom": ["key-1/zoom-1.png", "key-1/zoom-2.png"],
       "featured": 1,
       "purchase": 27,
       "idCate": 9,
@@ -196,14 +190,8 @@
       "image": "pc-3/pd-3.jpg",
       "price": 2000000,
       "sale": 0,
-      "imagesNav": [
-        "pc-3/de-1.jpg",
-        "pc-3/de-2.jpg"
-      ],
-      "imagesZoom": [
-        "pc-3/pc-1.jpg",
-        "pc-3/pc-2.jpg"
-      ],
+      "imagesNav": ["pc-3/de-1.jpg", "pc-3/de-2.jpg"],
+      "imagesZoom": ["pc-3/pc-1.jpg", "pc-3/pc-2.jpg"],
       "featured": 0,
       "purchase": 7,
       "idCate": 1,
@@ -423,16 +411,8 @@
       "image": "pc-5/pd-5.jpg",
       "price": 3650000,
       "sale": 0.1,
-      "imagesNav": [
-        "pc-5/de-1.jpg",
-        "pc-5/de-2.jpg",
-        "pc-5/de-3.jpg"
-      ],
-      "imagesZoom": [
-        "pc-5/pc-1.jpg",
-        "pc-5/pc-2.jpg",
-        "pc-5/pc-3.jpg"
-      ],
+      "imagesNav": ["pc-5/de-1.jpg", "pc-5/de-2.jpg", "pc-5/de-3.jpg"],
+      "imagesZoom": ["pc-5/pc-1.jpg", "pc-5/pc-2.jpg", "pc-5/pc-3.jpg"],
       "featured": 0,
       "purchase": 24,
       "idCate": 1,
@@ -602,6 +582,102 @@
       "idCate": "9",
       "brand": "iphone",
       "id": 23
+    },
+    {
+      "id": 22,
+      "nameProduct": "Camera GoPro Hero 10 Black",
+      "image": "camera-1/camera-1.jpg",
+      "price": 13990000,
+      "sale": 0,
+      "imagesNav": [
+        "camera-1/de-1.jpg",
+        "camera-1/de-2.jpg",
+        "camera-1/de-3.jpg",
+        "camera-1/de-4.jpg",
+        "camera-1/de-5.jpg",
+        "camera-1/de-6.jpg",
+        "camera-1/de-7.jpg"
+      ],
+      "imagesZoom": [
+        "camera-1/zoom-1.jpg",
+        "camera-1/zoom-2.jpg",
+        "camera-1/zoom-3.jpg",
+        "camera-1/zoom-4.jpg",
+        "camera-1/zoom-5.jpg",
+        "camera-1/zoom-6.jpg",
+        "camera-1/zoom-7.jpg"
+      ],
+      "featured": 0,
+      "purchase": 12,
+      "idCate": 7,
+      "brand": "Gopro"
+    },
+    {
+      "id": 23,
+      "nameProduct": "Ultrasone Meteor One",
+      "image": "listen-1/listen-1.jpg",
+      "price": 6990000,
+      "sale": 0,
+      "imagesNav": [
+        "listen-1/de-1.jpg",
+        "listen-1/de-2.jpg",
+        "listen-1/de-3.jpg"
+      ],
+      "imagesZoom": [
+        "listen-1/zoom-1.png",
+        "listen-1/zoom-2.png",
+        "listen-1/zoom-3.png"
+      ],
+      "featured": 1,
+      "purchase": 5,
+      "idCate": 5,
+      "brand": "Ultrasone"
+    },
+    {
+      "id": 24,
+      "nameProduct": "Astel & Kern A & Norma SR35",
+      "image": "music-1/music-1.jpg",
+      "price": 21900000,
+      "sale": 0,
+      "imagesNav": [
+        "music-1/de-1.jpg",
+        "music-1/de-2.jpg",
+        "music-1/de-3.jpg",
+        "music-1/de-4.jpg"
+      ],
+      "imagesZoom": [
+        "music-1/zoom-1.jpg",
+        "music-1/zoom-2.jpg",
+        "music-1/zoom-3.jpg",
+        "music-1/zoom-4.jpg"
+      ],
+      "featured": 0,
+      "purchase": 16,
+      "idCate": 6,
+      "brand": "Astel & Kern"
+    },
+    {
+      "id": 25,
+      "nameProduct": "ASUS ROG Rapture GT-AX6000",
+      "image": "network-1/network-1.jpg",
+      "price": 11290000,
+      "sale": 0,
+      "imagesNav": [
+        "network-1/de-1.jpg",
+        "network-1/de-2.jpg",
+        "network-1/de-3.jpg",
+        "network-1/de-4.jpg"
+      ],
+      "imagesZoom": [
+        "network-1/zoom-1.jpg",
+        "network-1/zoom-2.jpg",
+        "network-1/zoom-3.jpg",
+        "network-1/zoom-4.jpg"
+      ],
+      "featured": 0,
+      "purchase": 11,
+      "idCate": 3,
+      "brand": "ASUS"
     }
   ],
   "users": [

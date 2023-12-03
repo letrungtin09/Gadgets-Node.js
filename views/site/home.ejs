@@ -145,12 +145,27 @@
                                             <img src="/images/products/<%= Buffer.from(pd.image, `utf-8`).toString(`utf-8`) %>"
                                                 class="card-img-top" alt="...">
                                             <div class="card-body">
-                                                <h5 class="card-title">vcvxvxvxcv</h5>
-                                                <div class="card-discount d-flex align-items-end">
-                                                    <p class="card-new">123000<span class="vnd">đ</span></p>
-                                                    <span class="card-sale">Sale 20%</span>
-                                                </div>
-                                                <p class="card-old">223000<span class="vnd">đ</span></p>
+                                                <h5 class="card-title">
+                                                    <%= pd.nameProduct %>
+                                                </h5>
+                                                <% if(pd.sale==0){ %>
+                                                    <div class="card-discount d-flex align-items-end">
+                                                        <p class="card-new">
+                                                            <%= (pd.price).toLocaleString() %><span class="vnd">đ</span>
+                                                        </p>
+                                                    </div>
+                                                    <% } else { %>
+                                                        <div class="card-discount d-flex align-items-end">
+                                                            <p class="card-new">
+                                                                <%= (pd.price - (pd.price*pd.sale)).toLocaleString() %>
+                                                                    <span class="vnd">đ</span>
+                                                            </p>
+                                                            <span class="card-sale">Sale <%= pd.sale * 100 %>%</span>
+                                                        </div>
+                                                        <p class="card-old">
+                                                            <%= (pd.price).toLocaleString() %><span class="vnd">đ</span>
+                                                        </p>
+                                                        <% } %>
                                             </div>
                                         </div>
                                     </a>
@@ -163,16 +178,32 @@
                         <div class="bestseller__selling">
                             <% for(let pd of top10PD){ %>
                                 <div class="selling-item">
-                                    <a class="bestseller__card" href="">
+                                    <a class="bestseller__card" href="/detailProduct/<%= pd.idProduct %>">
                                         <div class="card">
-                                            <img src="/images/products/key-3/key-3.jpg" class="card-img-top" alt="...">
+                                            <img src="/images/products/<%= Buffer.from(pd.image, `utf-8`).toString(`utf-8`) %>"
+                                                class="card-img-top" alt="...">
                                             <div class="card-body">
-                                                <h5 class="card-title">fhfghhf</h5>
-                                                <div class="card-discount d-flex align-items-end">
-                                                    <p class="card-new">123123<span class="vnd">đ</span></p>
-                                                    <span class="card-sale">Sale 23%</span>
-                                                </div>
-                                                <p class="card-old">3424234<span class="vnd">đ</span></p>
+                                                <h5 class="card-title">
+                                                    <%= pd.nameProduct %>
+                                                </h5>
+                                                <% if(pd.sale==0){ %>
+                                                    <div class="card-discount d-flex align-items-end">
+                                                        <p class="card-new">
+                                                            <%= (pd.price).toLocaleString() %><span class="vnd">đ</span>
+                                                        </p>
+                                                    </div>
+                                                    <% } else { %>
+                                                        <div class="card-discount d-flex align-items-end">
+                                                            <p class="card-new">
+                                                                <%= (pd.price - (pd.price*pd.sale)).toLocaleString() %>
+                                                                    <span class="vnd">đ</span>
+                                                            </p>
+                                                            <span class="card-sale">Sale <%= pd.sale * 100 %>%</span>
+                                                        </div>
+                                                        <p class="card-old">
+                                                            <%= (pd.price).toLocaleString() %><span class="vnd">đ</span>
+                                                        </p>
+                                                        <% } %>
                                             </div>
                                         </div>
                                     </a>
@@ -185,16 +216,24 @@
                         <div class="bestseller__promotion">
                             <% for(let pd of salePD){ %>
                                 <div class="promotion-item">
-                                    <a class="bestseller__card" href="#">
+                                    <a class="bestseller__card" href="/detailProduct/<%= pd.idProduct %>">
                                         <div class="card">
-                                            <img src="/images/products/key-2/key-2.jpg" class="card-img-top" alt="...">
+                                            <img src="/images/products/<%= Buffer.from(pd.image, `utf-8`).toString(`utf-8`) %>"
+                                                class="card-img-top" alt="...">
                                             <div class="card-body">
-                                                <h5 class="card-title">bccbvbcbcvb</h5>
+                                                <h5 class="card-title">
+                                                    <%= pd.nameProduct %>
+                                                </h5>
                                                 <div class="card-discount d-flex align-items-end">
-                                                    <p class="card-new">213213<span class="vnd">đ</span></p>
-                                                    <span class="card-sale">Sale 12%</span>
+                                                    <p class="card-new">
+                                                        <%= (pd.price - (pd.price*pd.sale)).toLocaleString() %>
+                                                            <span class="vnd">đ</span>
+                                                    </p>
+                                                    <span class="card-sale">Sale <%= pd.sale * 100 %>%</span>
                                                 </div>
-                                                <p class="card-old">3324234<span class="vnd">đ</span></p>
+                                                <p class="card-old">
+                                                    <%= (pd.price).toLocaleString() %><span class="vnd">đ</span>
+                                                </p>
                                             </div>
                                         </div>
                                     </a>
@@ -204,7 +243,7 @@
                     </div>
                 </div>
                 <div class="bestseller__showAll">
-                    <a href="allProduct.html" class="btn--show">
+                    <a href="/allProduct" class="btn--show">
                         <i class="fa fa-plus-circle"></i><span>Xem thêm</span>
                     </a>
                 </div>
@@ -237,16 +276,32 @@
                 <h2 class="section-text">Sản phẩm đặc biệt</h2>
                 <div class="featured__list">
                     <% for(let pd of featuredPD){ %>
-                        <a class="featured__item text-decoration-none" href="#">
+                        <a class="featured__item text-decoration-none" href="/detailProduct/<%= pd.idProduct %>">
                             <div class="card">
-                                <img src="/images/products/lap-1/laptop-1.jpg" class="card-img-top" alt="...">
+                                <img src="/images/products/<%= Buffer.from(pd.image, `utf-8`).toString(`utf-8`) %>"
+                                    class="card-img-top" alt="...">
                                 <div class="card-body">
-                                    <h5 class="card-title">nbnbnnnn</h5>
-                                    <div class="card-discount d-flex align-items-end">
-                                        <p class="card-new">123213<span class="vnd">đ</span></p>
-                                        <span class="card-sale">Sale 12%</span>
-                                    </div>
-                                    <p class="card-old">34343434<span class="vnd">đ</span></p>
+                                    <h5 class="card-title">
+                                        <%= pd.nameProduct %>
+                                    </h5>
+                                    <% if(pd.sale==0){ %>
+                                        <div class="card-discount d-flex align-items-end">
+                                            <p class="card-new">
+                                                <%= (pd.price).toLocaleString() %><span class="vnd">đ</span>
+                                            </p>
+                                        </div>
+                                        <% } else { %>
+                                            <div class="card-discount d-flex align-items-end">
+                                                <p class="card-new">
+                                                    <%= (pd.price - (pd.price*pd.sale)).toLocaleString() %>
+                                                        <span class="vnd">đ</span>
+                                                </p>
+                                                <span class="card-sale">Sale <%= pd.sale * 100 %>%</span>
+                                            </div>
+                                            <p class="card-old">
+                                                <%= (pd.price).toLocaleString() %><span class="vnd">đ</span>
+                                            </p>
+                                            <% } %>
                                 </div>
                             </div>
                         </a>
