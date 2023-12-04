@@ -1,14 +1,6 @@
 const productModel = require("../../models/productsModel");
 const categoryModel = require("../../models/categoriesModel");
 
-// Hàm chuyển object buffer thành json
-function bufferJson(img) {
-  const buffer = Buffer.from(img, "utf-8");
-  // Chuyển đổi Buffer thành đối tượng JSON
-  const jsonObj = JSON.parse(buffer.toString("utf-8"));
-  return jsonObj;
-}
-
 class DetailPDController {
   async detailPD(req, res) {
     let idPD = req.params.idProduct;
@@ -17,18 +9,10 @@ class DetailPDController {
       let getPD = await productModel.getPDId(idPD);
       let getPDCate = await productModel.getPDCate(getPD[0].idCategory);
 
-      const imgNav = bufferJson(getPD[0].imagesNav);
-      const arrImgNav = imgNav.imagesNav;
-
-      const imgZoom = bufferJson(getPD[0].imagesZoom);
-      const arrImgZoom = imgZoom.imagesZoom;
-
       res.render("site/detailProduct", {
         category: getCate,
         detail: getPD,
         productCate: getPDCate,
-        arrImgNav,
-        arrImgZoom,
       });
     } catch (err) {
       console.error(err);

@@ -1,0 +1,62 @@
+<%- include('../../partials/headerAdmin') %>
+
+    <section class="formInsertEdit">
+        <div class="formInsertEdit__title">
+            <h1>THÊM SẢN PHẨM</h1>
+        </div>
+        <div class="formInsertEdit__space"></div>
+        <div class="formInsertEdit__content">
+            <form action="/addNewPD" method="post" enctype="multipart/form-data">
+                <div class="formInsertEdit__item">
+                    <label class="formInsertEdit__label" for="idPD">Mã sản phẩm</label><br>
+                    <input class="formInsertEdit__input input-readonly" type="text" name="idPD" value="Auto number"
+                        readonly>
+                </div>
+                <div class="formInsertEdit__item">
+                    <label class="formInsertEdit__label" for="namePD">Tên sản phẩm</label><br>
+                    <input class="formInsertEdit__input" type="text" name="namePD" id="namePD">
+                </div>
+                <div class="formInsertEdit__item">
+                    <label class="formInsertEdit__label" for="imgPD">Hình ảnh</label><br>
+                    <input class="formInsertEdit__input" type="file" name="imgPD" id="imgPD">
+                </div>
+                <div class="formInsertEdit__item">
+                    <label class="formInsertEdit__label" for="pricePD">Đơn giá</label><br>
+                    <input class="formInsertEdit__input" type="text" name="pricePD" id="pricePD">
+                </div>
+                <div class="formInsertEdit__item">
+                    <label class="formInsertEdit__label" for="salePD">Mức giảm giá</label><br>
+                    <input class="formInsertEdit__input" type="text" name="salePD" id="salePD">
+                </div>
+                <div class="formInsertEdit__item">
+                    <label class="formInsertEdit__label" for="featuredPD">Đặc biệt</label><br>
+                    <div class="formInsertEdit__input input-radio">
+                        <input type="radio" name="featuredPD" value="1"><span>Sản phẩm đặc biệt</span>
+                        <input type="radio" name="featuredPD" value="0"><span>Sản phẩm bình thường</span>
+                    </div>
+                </div>
+                <div class="formInsertEdit__item">
+                    <label class="formInsertEdit__label" for="idCate">Loại sản phẩm</label><br>
+                    <select class="formInsertEdit__input" name="idCate" id="idCate">
+                        <option value="0">--- Chọn loại sản phẩm</option>
+                        <% for(let cate of category){ %>
+                            <option value="<%= cate.idCategory %>">
+                                <%= cate.nameCategory %>
+                            </option>
+                            <% } %>
+                    </select>
+                </div>
+                <div class="formInsertEdit__item">
+                    <label class="formInsertEdit__label" for="brandPD">Thương hiệu</label><br>
+                    <input class="formInsertEdit__input" type="text" name="brandPD" id="brandPD">
+                </div>
+                <div class="formInsertEdit__item formInsertEdit__btn">
+                    <button name="btn-insert" class="btn-form" id="btnInsert">Thêm mới</button>
+                    <button type="reset" class="btn-form">Nhập lại</button>
+                    <a href="/admin" class="btn-form">Danh sách</a>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <%- include('../../partials/footerAdmin') %>

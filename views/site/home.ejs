@@ -142,8 +142,7 @@
                                 <div class="all-item" id="${i + 1}">
                                     <a class="bestseller__card" href="/detailProduct/<%= pd.idProduct %>">
                                         <div class="card">
-                                            <img src="/images/products/<%= Buffer.from(pd.image, `utf-8`).toString(`utf-8`) %>"
-                                                class="card-img-top" alt="...">
+                                            <img src="/images/products/<%= pd.image %>" class="card-img-top" alt="...">
                                             <div class="card-body">
                                                 <h5 class="card-title">
                                                     <%= pd.nameProduct %>
@@ -180,8 +179,7 @@
                                 <div class="selling-item">
                                     <a class="bestseller__card" href="/detailProduct/<%= pd.idProduct %>">
                                         <div class="card">
-                                            <img src="/images/products/<%= Buffer.from(pd.image, `utf-8`).toString(`utf-8`) %>"
-                                                class="card-img-top" alt="...">
+                                            <img src="/images/products/<%= pd.image %>" class="card-img-top" alt="...">
                                             <div class="card-body">
                                                 <h5 class="card-title">
                                                     <%= pd.nameProduct %>
@@ -218,8 +216,7 @@
                                 <div class="promotion-item">
                                     <a class="bestseller__card" href="/detailProduct/<%= pd.idProduct %>">
                                         <div class="card">
-                                            <img src="/images/products/<%= Buffer.from(pd.image, `utf-8`).toString(`utf-8`) %>"
-                                                class="card-img-top" alt="...">
+                                            <img src="/images/products/<%= pd.image %>" class="card-img-top" alt="...">
                                             <div class="card-body">
                                                 <h5 class="card-title">
                                                     <%= pd.nameProduct %>
@@ -278,8 +275,7 @@
                     <% for(let pd of featuredPD){ %>
                         <a class="featured__item text-decoration-none" href="/detailProduct/<%= pd.idProduct %>">
                             <div class="card">
-                                <img src="/images/products/<%= Buffer.from(pd.image, `utf-8`).toString(`utf-8`) %>"
-                                    class="card-img-top" alt="...">
+                                <img src="/images/products/<%= pd.image %>" class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <h5 class="card-title">
                                         <%= pd.nameProduct %>

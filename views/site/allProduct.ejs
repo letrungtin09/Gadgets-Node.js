@@ -14,8 +14,7 @@
                     <% for(let pd of products){ %>
                         <a class="showAllPd__item text-decoration-none" href="/detailProduct/<%= pd.idProduct %>">
                             <div class="card">
-                                <img src="/images/products/<%= Buffer.from(pd.image, `utf-8`).toString(`utf-8`) %>"
-                                    class="card-img-top" alt="...">
+                                <img src="/images/products/<%= pd.image %>" class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <h5 class="card-title">
                                         <%= pd.nameProduct %>

@@ -4,7 +4,7 @@
         <div class="content-adminTop">
             <h2>Quản lý loại sản phẩm</h2>
             <div class="admin-btnAdd">
-                <a class="btn--add" href="formAddCate.html"><i class="fa fa-plus"></i> Thêm loại sản
+                <a class="btn--add" href="/formAddCate"><i class="fa fa-plus"></i> Thêm loại sản
                     phẩm</a>
             </div>
         </div>
@@ -13,10 +13,38 @@
                 <thead>
                     <th>mã loại SP</th>
                     <th>tên loại SP</th>
+                    <th>số lượng sản phẩm</th>
                     <th>thao tác</th>
                 </thead>
                 <tbody class="infoCate">
-
+                    <% for(let cate of category){ %>
+                        <tr>
+                            <td class="cate-admin">
+                                <%= cate.idCategory %>
+                            </td>
+                            <td class="cate-admin">
+                                <%= cate.nameCategory %>
+                            </td>
+                            <% for(let pd of quantity){ %>
+                                <% if(cate.idCategory==pd.idCategory){ %>
+                                    <td class="cate-admin">
+                                        <%= pd.quantity %>
+                                    </td>
+                                    <% } %>
+                                        <% } %>
+                                            <td class="cate-admin">
+                                                <div class="btns-admin">
+                                                    <a class="btn--edit"
+                                                        href="/formUpdateCate/<%= cate.idCategory %>"><i
+                                                            class="fa fa-edit"></i> Sửa</a>
+                                                    <button class="btn--delete"
+                                                        onclick="deleteCate(`<%= cate.idCategory %>`)"><i
+                                                            class="fa fa-times-circle"></i>
+                                                        Xóa</button>
+                                                </div>
+                                            </td>
+                        </tr>
+                        <% } %>
                 </tbody>
             </table>
         </div>

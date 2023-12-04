@@ -4,8 +4,7 @@
         <div class="content-adminTop">
             <h2>Quản lý sản phẩm</h2>
             <div class="admin-btnAdd">
-                <a class="btn--add" href="formAddPd.html"><i class="fa fa-plus"></i> Thêm sản
-                    phẩm</a>
+                <a class="btn--add" href="/formAddPd"><i class="fa fa-plus"></i> Thêm sản phẩm</a>
             </div>
         </div>
         <div class="content-adminBottom">
@@ -15,13 +14,99 @@
                     <th>tên sản phẩm</th>
                     <th>hình ảnh</th>
                     <th>giá</th>
-                    <th>mức giảm giá</th>
+                    <th>giảm giá</th>
                     <th>lượt mua</th>
                     <th>thương hiệu</th>
+                    <th>Loại sản phẩm</th>
                     <th>thao tác</th>
                 </thead>
                 <tbody class="infoCate">
+                    <% for(let pd of products){ %>
+                        <tr>
+                            <td class="id-pd">
+                                <%= pd.idProduct %>
+                            </td>
+                            <td class="name-pd">
+                                <%= pd.nameProduct %>
+                            </td>
+                            <td><img style="width:70px; height:70px;" src="/images/products/<%= pd.image %>" alt="">
+                            </td>
+                            <td class="price-pd">
+                                <%= (pd.price).toLocaleString() %> <span class="vnd">đ</span>
+                            </td>
+                            <% if(pd.sale==0){ %>
+                                <td>
+                                    0
+                                </td>
+                                <% }else{ %>
+                                    <td>
+                                        <%= pd.sale * 100 %>%
+                                    </td>
+                                    <% } %>
+                                        <td>
+                                            <%= pd.purchase %>
+                                        </td>
+                                        <td>
+                                            <%= pd.brand %>
+                                        </td>
+                                        <% for(let cate of category){ %>
+                                            <% if(cate.idCategory==pd.idCategory){ %>
+                                                <td>
+                                                    <%= cate.nameCategory %>
+                                                </td>
+                                                <% } %>
+                                                    <% } %>
+                                                        <td class="btnTd">
+                                                            <div class="btns-admin">
+                                                                <a class="btn--edit"
+                                                                    href="/formUpdatePd/<%= pd.idProduct %>"><i
+                                                                        class="fa fa-edit"></i> Sửa</a>
+                                                                <!-- <button class="btn--delete"><i
+                                                                        class="fa fa-times-circle"></i>
+                                                                    Xóa</button> -->
+                                                                <!-- Button trigger modal -->
+                                                                <button type="button" class="btn--delete"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#exampleModal<%= pd.idProduct %>">
+                                                                    <i class="fa fa-times-circle"></i> Xóa
+                                                                </button>
 
+                                                                <!-- Modal -->
+                                                                <div class="modal fade"
+                                                                    id="exampleModal<%= pd.idProduct %>" tabindex="-1"
+                                                                    aria-labelledby="exampleModalLabel"
+                                                                    aria-hidden="true">
+                                                                    <div class="modal-dialog">
+                                                                        <div class="modal-content">
+                                                                            <div class="modal-header">
+                                                                                <h1 class="modal-title fs-5"
+                                                                                    id="exampleModalLabel">Xác nhận xóa
+                                                                                    sản phẩm
+                                                                                </h1>
+                                                                                <button type="button" class="btn-close"
+                                                                                    data-bs-dismiss="modal"
+                                                                                    aria-label="Close"></button>
+                                                                            </div>
+                                                                            <div class="modal-body">
+                                                                                Bạn chắc chắn muốn xóa sản phẩm <span
+                                                                                    class="fw-bold">
+                                                                                    "<%= pd.nameProduct %>"
+                                                                                </span> ?
+                                                                            </div>
+                                                                            <div class="modal-footer">
+                                                                                <button type="button"
+                                                                                    class="btn btn-secondary"
+                                                                                    data-bs-dismiss="modal">Hủy</button>
+                                                                                <a class="btn btn-danger"
+                                                                                    href="/deletePD/<%= pd.idProduct %>">Xóa</a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                        </tr>
+                        <% } %>
                 </tbody>
             </table>
         </div>

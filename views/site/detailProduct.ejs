@@ -30,22 +30,18 @@
                                 <div class="productIntro__promotion">Sale <%= detail[0].sale * 100 %>%</div>
                                 <% } %>
                                     <div class="productIntro__nav">
-                                        <% for(let img of arrImgNav){ %>
-                                            <div class="nav--item">
-                                                <div class="item--img">
-                                                    <img src="/images/products/<%= img %>" alt="">
-                                                </div>
+                                        <div class="nav--item">
+                                            <div class="item--img">
+                                                <img src="" alt="">
                                             </div>
-                                            <% } %>
+                                        </div>
                                     </div>
                                     <div class="productIntro__slide">
-                                        <% for(let img of arrImgZoom){ %>
-                                            <div class="slide--item">
-                                                <a href="/images/products/<%= img %>" data-fancybox="gallery">
-                                                    <img src="/images/products/<%= img %>" alt="">
-                                                </a>
-                                            </div>
-                                            <% } %>
+                                        <div class="slide--item">
+                                            <a href="/images/products/<%= detail[0].image %>" data-fancybox="gallery">
+                                                <img src="/images/products/<%= detail[0].image %>" alt="">
+                                            </a>
+                                        </div>
                                     </div>
                                     <div class="productIntro__des">
                                         <img src="/images/zoom-in.png" alt="">

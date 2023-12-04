@@ -78,6 +78,18 @@ class ProductModel {
     }
   }
 
+  // Đếm số lượng sản phẩm theo idCategory
+  async countPD() {
+    let sql =
+      "SELECT idCategory,COUNT(*) AS quantity FROM products GROUP BY idCategory";
+    try {
+      let data = await useSQL(db, sql);
+      return data;
+    } catch (err) {
+      console.error(err);
+    }
+  }
+
   // Tìm kiếm sản phẩm
   async searchPD(keywords) {
     let sql = `SELECT * FROM products pd JOIN categories cate ON cate.idCategory = pd.idCategory WHERE pd.nameProduct LIKE ? OR cate.nameCategory LIKE ?`;
@@ -90,26 +102,26 @@ class ProductModel {
   }
 
   // Thêm sản phẩm mới
-  //   async postProduct(values) {
-  //     let sql =
-  //       "INSERT INTO products(nameProduct, images, description, priceProduct, authorProduct, idCategory) VALUES (?,?,?,?,?,?)";
-  //     try {
-  //       let data = await useValueSQL(db, sql, values);
-  //     } catch (err) {
-  //       throw err;
-  //     }
-  //   }
+  async addProduct(values) {
+    let sql =
+      "INSERT INTO products(nameProduct, image, price, sale, featured, idCategory, brand) VALUES (?,?,?,?,?,?,?)";
+    try {
+      let data = await useValueSQL(db, sql, values);
+    } catch (err) {
+      throw err;
+    }
+  }
 
   // Cập nhật thông tin sản phẩm
-  //   async postUpdateProduct(values) {
-  //     let sql =
-  //       "UPDATE products SET nameProduct=?, images=?, description=?, priceProduct=?, authorProduct=?, idCategory=? WHERE idProduct = ?";
-  //     try {
-  //       let data = await useValueSQL(db, sql, values);
-  //     } catch (err) {
-  //       throw err;
-  //     }
-  //   }
+  async updateProduct(values) {
+    let sql =
+      "UPDATE products SET nameProduct=?, image=?, price=?, sale=?, featured=?, idCategory=?, brand=? WHERE idProduct = ?";
+    try {
+      let data = await useValueSQL(db, sql, values);
+    } catch (err) {
+      throw err;
+    }
+  }
 
   // Xóa sản phẩm
   async deleteProduct(idPD) {

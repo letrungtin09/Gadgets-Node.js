@@ -1034,11 +1034,21 @@ footer .footer__copyright .footer__lttin a {
 }
 .formInsertEdit .formInsertEdit__input {
   width: 100%;
-  padding: 5px;
+  padding: 7px;
   margin-bottom: 15px;
-  background-color: #f3f5f7;
   border: 2px solid #999;
   border-radius: 5px;
+}
+.formInsertEdit .formInsertEdit__title h1 {
+  text-align: center;
+  font-size: 35px;
+}
+.formInsertEdit .input-readonly {
+  background-color: #f3f5f7;
+}
+.formInsertEdit .input-radio span {
+  margin-left: 10px;
+  margin-right: 50px;
 }
 .formInsertEdit .formInsertEdit__label {
   font-weight: 500;
@@ -1196,8 +1206,8 @@ footer .footer__copyright .footer__lttin a {
 }
 .productIntro .productIntro__info .productIntro__slick .productIntro__promotion {
   position: absolute;
-  top: 3px;
-  left: 90px;
+  top: 0px;
+  left: 30px;
   padding: 3px 15px;
   font-size: 13px;
   border-radius: 5px;
@@ -1208,7 +1218,7 @@ footer .footer__copyright .footer__lttin a {
 }
 .productIntro .productIntro__info .productIntro__slick .productIntro__nav {
   width: 70px;
-  display: flex;
+  display: none;
   align-items: center;
   margin-right: 30px;
 }
@@ -1294,7 +1304,6 @@ footer .footer__copyright .footer__lttin a {
   font-size: 13px;
   display: flex;
   align-items: center;
-  padding-left: 75px;
 }
 .productIntro .productIntro__info .productIntro__slick .productIntro__des span {
   color: #999;
@@ -1668,6 +1677,15 @@ footer .footer__copyright .footer__lttin a {
   border: 1px solid #e3e3e3;
   border-collapse: collapse;
   text-align: center;
+}
+.main-admin .right-admin .content-admin .content-adminBottom .name-pd {
+  width: 300px;
+}
+.main-admin .right-admin .content-admin .content-adminBottom .price-pd {
+  width: 120px;
+}
+.main-admin .right-admin .content-admin .content-adminBottom .cate-admin {
+  width: 25%;
 }
 .main-admin .right-admin .content-admin .content-adminBottom table {
   width: 100%;

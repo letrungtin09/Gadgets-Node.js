@@ -1,6 +1,7 @@
 const { db, useSQL, useValueSQL } = require("./database");
 
 class CategoryModel {
+  // Lấy tất cả loại sản phẩm
   async getAllCate() {
     let sql = "SELECT * FROM categories";
     try {
@@ -11,6 +12,7 @@ class CategoryModel {
     }
   }
 
+  // Lấy loại sản phẩm theo idCategory
   async getCateId(id) {
     let sql = "SELECT * FROM catelog WHERE idCategory = ?";
     try {
@@ -18,6 +20,26 @@ class CategoryModel {
       return data;
     } catch (err) {
       console.error(err);
+    }
+  }
+
+  // Thêm loại sản phẩm mới
+  async addCate(values) {
+    let sql = "INSERT INTO categories(nameCategory) VALUES (?)";
+    try {
+      let data = await useValueSQL(db, sql, values);
+    } catch (err) {
+      throw err;
+    }
+  }
+
+  // Cập nhật thông tin loại sản phẩm
+  async updateCate(values) {
+    let sql = "UPDATE categories SET nameCategory=? WHERE idCategory = ?";
+    try {
+      let data = await useValueSQL(db, sql, values);
+    } catch (err) {
+      throw err;
     }
   }
 }
