@@ -42,6 +42,16 @@ class CategoryModel {
       throw err;
     }
   }
+
+  // Xóa loại sản phẩm
+  async deleteCate(idCate) {
+    let sql = `DELETE FROM categories WHERE idCategory = ?`;
+    try {
+      let data = await useValueSQL(db, sql, idCate);
+    } catch (err) {
+      throw err;
+    }
+  }
 }
 
 module.exports = new CategoryModel();

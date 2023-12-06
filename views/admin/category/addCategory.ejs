@@ -1,0 +1,30 @@
+<%- include('../../partials/headerAdmin') %>
+
+    <section class="formInsertEdit">
+        <div class="formInsertEdit__title">
+            <h1>THÊM LOẠI SẢN PHẨM</h1>
+        </div>
+        <div class="formInsertEdit__space"></div>
+        <div class="formInsertEdit__content">
+            <form action="/addCate" method="post">
+                <div class="formInsertEdit__item">
+                    <label class="formInsertEdit__label" for="courseId">Mã loại sản phẩm</label><br>
+                    <input class="formInsertEdit__input input-readonly" id="idCate" type="text" name="courseId"
+                        value="Auto number" readonly>
+                </div>
+                <div class="formInsertEdit__item">
+                    <label class="formInsertEdit__label" for="nameCate">Tên loại sản phẩm</label><br>
+                    <input class="formInsertEdit__input" type="text" name="nameCate" id="nameCate">
+                </div>
+                <div class="formInsertEdit__item formInsertEdit__btn">
+                    <button name="btn-insert" class="btn-form" id="btnInsert">Thêm
+                        mới</button>
+                    <button type="reset" class="btn-form">Nhập lại</button>
+                    <a href="/adminCate" class="btn-form">Danh sách</a>
+                </div>
+            </form>
+
+        </div>
+    </section>
+
+    <%- include('../../partials/footerAdmin') %>

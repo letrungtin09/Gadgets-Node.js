@@ -1,0 +1,31 @@
+<%- include('../partials/header') %>
+
+    <!-- REGISTER FORM -->
+    <div class="form-gadgets register">
+        <div class="form-container register__form">
+            <form class="form-user" action="/registerUser" method="post">
+                <div class="register__content">
+                    <label for="email">Email</label><br>
+                    <input type="email" name="email"><br>
+                    <label for="password">Mật khẩu</label><br>
+                    <input type="password" name="password"><br>
+                    <label for="confirmPassword">Xác nhận mật khẩu</label><br>
+                    <input type="password" name="confirmPassword"><br>
+                    <label for="fullName">Họ và tên</label><br>
+                    <input type="text" name="fullName"><br>
+                </div>
+                <div class="register__btn">
+                    <button class="btn--register">Đăng ký</button>
+                </div>
+                <div class="register__rule">
+                    <span>Bạn đồng ý với <a href="#">Điều khoản sử dụng</a> và <a href="#">Chính sách bảo mật</a> của
+                        chúng tôi</span>
+                </div>
+                <div class="register__login">
+                    <span>Đã có tài khoản ? <a href="/login">Đăng nhập</a></span>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <%- include('../partials/footer') %>

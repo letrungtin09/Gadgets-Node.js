@@ -232,6 +232,7 @@ header {
           text-transform: uppercase;
           position: relative;
           padding: $pd-5 $pd-4;
+          text-align: center;
           &::before {
             content: "";
             position: absolute;

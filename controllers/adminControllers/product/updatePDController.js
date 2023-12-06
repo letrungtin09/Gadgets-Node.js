@@ -1,28 +1,31 @@
 const categoryModel = require("../../../models/categoriesModel");
 const productsModel = require("../../../models/productsModel");
 
-class AddPDController {
-  async showAddPD(req, res) {
+class UpdatePDController {
+  async showUpdatePD(req, res) {
     try {
+      let idPD = req.params.idProduct;
       let getAllCate = await categoryModel.getAllCate();
-      res.render("admin/product/addProduct", {
+      let getPDId = await productsModel.getPDId(idPD);
+      res.render("admin/product/updateProduct", {
         category: getAllCate,
+        product: getPDId,
       });
     } catch (err) {
       console.error(err);
     }
   }
 
-  async addPD(req, res) {
+  async updatePD(req, res) {
     try {
+      let idPD = req.body.idPD;
       let namePD = req.body.namePD;
       let pricePD = req.body.pricePD;
       let idCategory = req.body.idCate;
       let featuredPD = req.body.featuredPD;
       let salePD = req.body.salePD;
       let brandPD = req.body.brandPD;
-      let imagePD = req.file.filename;
-
+      let imagePD = req.file ? req.file.filename : req.body.imgOldPD;
       let newProduct = [
         namePD,
         imagePD,
@@ -31,8 +34,9 @@ class AddPDController {
         +featuredPD,
         +idCategory,
         brandPD,
+        +idPD,
       ];
-      let postData = await productsModel.addProduct(newProduct);
+      let putData = await productsModel.updateProduct(newProduct);
       res.redirect("/admin");
     } catch (err) {
       console.error(err);
@@ -40,4 +44,4 @@ class AddPDController {
   }
 }
 
-module.exports = new AddPDController();
+module.exports = new UpdatePDController();

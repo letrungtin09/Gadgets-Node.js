@@ -292,6 +292,7 @@ header .header__bottom .menu-list .menu-item .menu-link {
   text-transform: uppercase;
   position: relative;
   padding: 10px 20px;
+  text-align: center;
 }
 header .header__bottom .menu-list .menu-item .menu-link::before {
   content: "";

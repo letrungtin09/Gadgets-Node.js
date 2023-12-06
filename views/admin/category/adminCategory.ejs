@@ -37,10 +37,42 @@
                                                     <a class="btn--edit"
                                                         href="/formUpdateCate/<%= cate.idCategory %>"><i
                                                             class="fa fa-edit"></i> Sửa</a>
-                                                    <button class="btn--delete"
-                                                        onclick="deleteCate(`<%= cate.idCategory %>`)"><i
-                                                            class="fa fa-times-circle"></i>
-                                                        Xóa</button>
+                                                    <!-- Button trigger modal -->
+                                                    <button type="button" class="btn--delete" data-bs-toggle="modal"
+                                                        data-bs-target="#exampleModal<%= cate.idCategory %>">
+                                                        <i class="fa fa-times-circle"></i> Xóa
+                                                    </button>
+
+                                                    <!-- Modal -->
+                                                    <div class="modal fade" id="exampleModal<%= cate.idCategory %>"
+                                                        tabindex="-1" aria-labelledby="exampleModalLabel"
+                                                        aria-hidden="true">
+                                                        <div class="modal-dialog">
+                                                            <div class="modal-content">
+                                                                <div class="modal-header">
+                                                                    <h1 class="modal-title fs-5" id="exampleModalLabel">
+                                                                        Xác nhận xóa loại
+                                                                        sản phẩm
+                                                                    </h1>
+                                                                    <button type="button" class="btn-close"
+                                                                        data-bs-dismiss="modal"
+                                                                        aria-label="Close"></button>
+                                                                </div>
+                                                                <div class="modal-body">
+                                                                    Bạn chắc chắn muốn xóa loại sản phẩm <span
+                                                                        class="fw-bold">
+                                                                        "<%= cate.nameCategory %>"
+                                                                    </span> ?
+                                                                </div>
+                                                                <div class="modal-footer">
+                                                                    <button type="button" class="btn btn-secondary"
+                                                                        data-bs-dismiss="modal">Hủy</button>
+                                                                    <a class="btn btn-danger"
+                                                                        href="/deleteCate/<%= cate.idCategory %>">Xóa</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </td>
                         </tr>

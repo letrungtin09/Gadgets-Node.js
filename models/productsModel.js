@@ -81,7 +81,7 @@ class ProductModel {
   // Đếm số lượng sản phẩm theo idCategory
   async countPD() {
     let sql =
-      "SELECT idCategory,COUNT(*) AS quantity FROM products GROUP BY idCategory";
+      "SELECT cate.idCategory, COUNT(pd.idProduct) AS quantity FROM categories cate LEFT JOIN products pd ON cate.idCategory = pd.idCategory GROUP BY cate.idCategory";
     try {
       let data = await useSQL(db, sql);
       return data;

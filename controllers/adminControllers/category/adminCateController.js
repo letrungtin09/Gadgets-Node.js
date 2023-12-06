@@ -6,7 +6,6 @@ class AdminCateController {
     try {
       let getAllCate = await categoryModel.getAllCate();
       let quantityPD = await productModel.countPD();
-      console.log(quantityPD);
       res.render("admin/category/adminCategory", {
         category: getAllCate,
         quantity: quantityPD,

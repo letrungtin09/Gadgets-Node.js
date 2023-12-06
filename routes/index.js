@@ -7,8 +7,18 @@ const adminPDRoute = require("./adminRoutes/product/adminPDRoute");
 const adminCateRoute = require("./adminRoutes/category/adminCateRoute");
 const addPDRoute = require("./adminRoutes/product/addPDRoute");
 const deletePDRoute = require("./adminRoutes/product/deletePDRoute");
+const addCateRoute = require("./adminRoutes/category/addCateRoute");
+const deleteCateRoute = require("./adminRoutes/category/deleteCateRoute");
+const updatePDRoute = require("./adminRoutes/product/updatePDRoute");
+const loginRoute = require("./siteRoutes/loginRoute");
+const registerRoute = require("./siteRoutes/registerRoute");
 
 function route(app) {
+  app.use("/", registerRoute);
+  app.use("/", loginRoute);
+  app.use("/", updatePDRoute);
+  app.use("/deleteCate", deleteCateRoute);
+  app.use("/", addCateRoute);
   app.use("/deletePD", deletePDRoute);
   app.use("/", addPDRoute);
   app.use("/adminCate", adminCateRoute);
