@@ -10,12 +10,14 @@ const deletePDRoute = require("./adminRoutes/product/deletePDRoute");
 const addCateRoute = require("./adminRoutes/category/addCateRoute");
 const deleteCateRoute = require("./adminRoutes/category/deleteCateRoute");
 const updatePDRoute = require("./adminRoutes/product/updatePDRoute");
+const updateCateRoute = require("./adminRoutes/category/updateCateRoute");
 const loginRoute = require("./siteRoutes/loginRoute");
 const registerRoute = require("./siteRoutes/registerRoute");
 
 function route(app) {
   app.use("/", registerRoute);
   app.use("/", loginRoute);
+  app.use("/", updateCateRoute);
   app.use("/", updatePDRoute);
   app.use("/deleteCate", deleteCateRoute);
   app.use("/", addCateRoute);

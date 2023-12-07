@@ -14,7 +14,7 @@ class CategoryModel {
 
   // Lấy loại sản phẩm theo idCategory
   async getCateId(id) {
-    let sql = "SELECT * FROM catelog WHERE idCategory = ?";
+    let sql = "SELECT * FROM categories WHERE idCategory = ?";
     try {
       let data = await useValueSQL(db, sql, id);
       return data;
